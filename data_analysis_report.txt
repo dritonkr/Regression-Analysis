@@ -1,0 +1,168 @@
+Dataset Information:
+PercentBodyFat    float64
+Age               float64
+Weight            float64
+Height            float64
+Neck              float64
+Chest             float64
+Abdomen           float64
+Hip               float64
+Thigh             float64
+Knee              float64
+Ankle             float64
+Biceps            float64
+Forearm           float64
+Wrist             float64
+dtype: object
+
+Summary Statistics (before cleaning):
+       PercentBodyFat         Age      Weight      Height  ...       Ankle      Biceps     Forearm       Wrist
+count       252.00000  252.000000  252.000000  252.000000  ...  252.000000  252.000000  252.000000  252.000000
+mean         18.96625   44.871032  178.257738   70.763889  ...   23.155159   32.229365   28.686111   18.272222
+std           8.25306   12.597201   30.365700   10.057816  ...    1.904559    3.066334    2.055991    1.157765
+min           0.00000   22.000000   51.000000   29.500000  ...   19.100000   23.600000   21.000000   15.800000
+25%          12.40000   35.750000  158.187500   68.250000  ...   22.000000   30.200000   27.300000   17.600000
+50%          19.20000   43.000000  176.125000   70.125000  ...   22.800000   32.000000   28.700000   18.300000
+75%          25.22500   54.000000  196.812500   72.250000  ...   24.000000   34.300000   30.000000   18.800000
+max          40.10000   81.000000  363.150000  219.000000  ...   36.900000   45.000000   34.900000   29.100000
+
+[8 rows x 14 columns]
+
+Summary Statistics (after cleaning):
+       PercentBodyFat         Age      Weight      Height  ...       Ankle      Biceps     Forearm       Wrist
+count      249.000000  249.000000  249.000000  249.000000  ...  249.000000  249.000000  249.000000  249.000000
+mean        19.187952   44.919679  179.219679   70.200803  ...   23.116466   32.312048   28.689558   18.241365
+std          8.049189   12.652679   29.008342    3.649367  ...    1.693325    2.983911    2.008423    0.928804
+min          3.000000   22.000000  125.000000   29.500000  ...   19.100000   25.300000   21.000000   15.800000
+25%         12.500000   36.000000  159.250000   68.500000  ...   22.000000   30.300000   27.300000   17.600000
+50%         19.200000   43.000000  176.750000   70.250000  ...   22.800000   32.100000   28.700000   18.300000
+75%         25.300000   54.000000  197.000000   72.250000  ...   24.000000   34.300000   30.000000   18.800000
+max         40.100000   81.000000  363.150000   77.750000  ...   33.900000   45.000000   34.900000   21.400000
+
+[8 rows x 14 columns]
+
+Correlation with PercentBodyFat:
+PercentBodyFat    1.000000
+Abdomen           0.800611
+Chest             0.685854
+Hip               0.606914
+Weight            0.596295
+Thigh             0.548249
+Knee              0.515041
+Biceps            0.476094
+Neck              0.469952
+Forearm           0.347327
+Wrist             0.332809
+Age               0.287666
+Ankle             0.253460
+Height           -0.088083
+Name: PercentBodyFat, dtype: float64
+
+Highly correlated features (correlation > 0.7):
+{'Neck-Weight': np.float64(0.8251460955800544), 'Chest-Weight': np.float64(0.892243051832801), 'Chest-Neck': np.float64(0.7794118348327106), 'Abdomen-PercentBodyFat': np.float64(0.8006109101335558), 'Abdomen-Weight': np.float64(0.8864565290347228), 'Abdomen-Neck': np.float64(0.7473707248527255), 'Abdomen-Chest': np.float64(0.9121625569091099), 'Hip-Weight': np.float64(0.9391393575280168), 'Hip-Neck': np.float64(0.7263223742803584), 'Hip-Chest': np.float64(0.8223995955316724), 'Hip-Abdomen': np.float64(0.8695292106851585), 'Thigh-Weight': np.float64(0.8650969931922411), 'Thigh-Chest': np.float64(0.7241413597425621), 'Thigh-Abdomen': np.float64(0.7649161654507789), 'Thigh-Hip': np.float64(0.8957403839149505), 'Knee-Weight': np.float64(0.8570031659417172), 'Knee-Chest': np.float64(0.7264768378970681), 'Knee-Abdomen': np.float64(0.7498478582250705), 'Knee-Hip': np.float64(0.8301535540938625), 'Knee-Thigh': np.float64(0.7959757231704649), 'Biceps-Weight': np.float64(0.7949617474532201), 'Biceps-Neck': np.float64(0.7240742153607911), 'Biceps-Chest': np.float64(0.7254801193138194), 'Biceps-Hip': np.float64(0.7337913976144381), 'Biceps-Thigh': np.float64(0.754967870641975), 'Wrist-Weight': np.float64(0.7247775350160979), 'Wrist-Neck': np.float64(0.7408529385996163)}
+
+Random Forest Feature Importance:
+Abdomen    0.716529
+Height     0.052297
+Hip        0.029866
+Age        0.028109
+Chest      0.023590
+Neck       0.023364
+Ankle      0.021838
+Weight     0.021146
+Biceps     0.019501
+Wrist      0.018819
+Knee       0.017501
+Forearm    0.014296
+Thigh      0.013144
+dtype: float64
+
+Features selected by RFE:
+['Height', 'Neck', 'Abdomen', 'Hip', 'Wrist']
+
+R² Analysis Results:
+Abdomen: Individual R² = 0.4956, Cumulative R² = 0.4956, R² Change = 0.4956
+Chest: Individual R² = 0.3291, Cumulative R² = 0.5088, R² Change = 0.0132
+Thigh: Individual R² = 0.2100, Cumulative R² = 0.5329, R² Change = 0.0241
+Weight: Individual R² = 0.1667, Cumulative R² = 0.6329, R² Change = 0.0999
+Age: Individual R² = 0.1135, Cumulative R² = 0.6276, R² Change = -0.0052
+Biceps: Individual R² = 0.1080, Cumulative R² = 0.6275, R² Change = -0.0002
+Neck: Individual R² = 0.1052, Cumulative R² = 0.6462, R² Change = 0.0187
+Knee: Individual R² = 0.0944, Cumulative R² = 0.6407, R² Change = -0.0055
+Hip: Individual R² = 0.0895, Cumulative R² = 0.6486, R² Change = 0.0079
+Wrist: Individual R² = 0.0157, Cumulative R² = 0.6416, R² Change = -0.0070
+Height: Individual R² = -0.0095, Cumulative R² = 0.6316, R² Change = -0.0100
+Ankle: Individual R² = -0.1124, Cumulative R² = 0.6295, R² Change = -0.0021
+Forearm: Individual R² = -0.2712, Cumulative R² = 0.6581, R² Change = 0.0286
+
+Model Comparison:
+            Model  Features        R²      RMSE
+0    All Features        13  0.658102  4.485292
+1  Top 5 Features         5  0.627646  4.680804
+2    RFE Features         5  0.627664  4.680687
+
+Best Model: All Features
+Coefficients of the best model:
+    Feature  Coefficient
+5   Abdomen     0.915616
+11  Forearm     0.263327
+9     Ankle     0.219423
+7     Thigh     0.218015
+10   Biceps     0.206231
+0       Age     0.070794
+8      Knee    -0.007506
+1    Weight    -0.063824
+4     Chest    -0.066331
+2    Height    -0.124046
+6       Hip    -0.167589
+3      Neck    -0.288289
+12    Wrist    -1.807026
+
+Regression Equation:
+PercentBodyFat = -13.1545 + 0.9156 × Abdomen + 0.2633 × Forearm + 0.2194 × Ankle + 0.2180 × Thigh + 0.2062 × Biceps + 0.0708 × Age - 0.0075 × Knee - 0.0638 × Weight - 0.0663 × Chest - 0.1240 × Height - 0.1676 × Hip - 0.2883 × Neck - 1.8070 × Wrist
+
+Cross-validation R² scores for the best model:
+Mean R² = 0.6177, Std = 0.1866
+Individual scores: [0.77698593 0.70349669 0.25594492 0.71929476 0.63291661]
+
+Detailed Statistical Analysis:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         PercentBodyFat   R-squared:                       0.733
+Model:                            OLS   Adj. R-squared:                  0.719
+Method:                 Least Squares   F-statistic:                     49.71
+Date:                Thu, 20 Mar 2025   Prob (F-statistic):           6.49e-60
+Time:                        20:07:24   Log-Likelihood:                -707.57
+No. Observations:                 249   AIC:                             1443.
+Df Residuals:                     235   BIC:                             1492.
+Df Model:                          13                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const        -16.7421     17.363     -0.964      0.336     -50.949      17.465
+Age            0.0606      0.032      1.873      0.062      -0.003       0.124
+Weight        -0.0857      0.053     -1.605      0.110      -0.191       0.019
+Height        -0.0770      0.096     -0.804      0.422      -0.265       0.112
+Neck          -0.4692      0.231     -2.033      0.043      -0.924      -0.015
+Chest         -0.0204      0.100     -0.205      0.837      -0.217       0.176
+Abdomen        0.9314      0.087     10.740      0.000       0.761       1.102
+Hip           -0.2179      0.145     -1.498      0.135      -0.504       0.069
+Thigh          0.2330      0.145      1.606      0.110      -0.053       0.519
+Knee           0.0871      0.244      0.357      0.721      -0.393       0.567
+Ankle          0.1566      0.220      0.711      0.478      -0.277       0.591
+Biceps         0.1570      0.171      0.918      0.360      -0.180       0.494
+Forearm        0.4412      0.198      2.230      0.027       0.051       0.831
+Wrist         -1.5992      0.531     -3.012      0.003      -2.645      -0.553
+==============================================================================
+Omnibus:                        4.152   Durbin-Watson:                   1.812
+Prob(Omnibus):                  0.125   Jarque-Bera (JB):                2.701
+Skew:                           0.000   Prob(JB):                        0.259
+Kurtosis:                       2.490   Cond. No.                     1.79e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.79e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+

@@ -1,0 +1,49 @@
+Dataset Information:
+PercentBodyFat    float64
+Age               float64
+Weight            float64
+Height            float64
+Neck              float64
+Chest             float64
+Abdomen           float64
+Hip               float64
+Thigh             float64
+Knee              float64
+Ankle             float64
+Biceps            float64
+Forearm           float64
+Wrist             float64
+Unnamed: 14       float64
+dtype: object
+
+Summary Statistics:
+       PercentBodyFat         Age  ...       Wrist  Unnamed: 14
+count       252.00000  252.000000  ...  252.000000          1.0
+mean         18.96625   44.871032  ...   18.272222         18.4
+std           8.25306   12.597201  ...    1.157765          NaN
+min           0.00000   22.000000  ...   15.800000         18.4
+25%          12.40000   35.750000  ...   17.600000         18.4
+50%          19.20000   43.000000  ...   18.300000         18.4
+75%          25.22500   54.000000  ...   18.800000         18.4
+max          40.10000   81.000000  ...   29.100000         18.4
+
+[8 rows x 15 columns]
+
+Missing Values:
+PercentBodyFat      0
+Age                 0
+Weight              0
+Height              0
+Neck                0
+Chest               0
+Abdomen             0
+Hip                 0
+Thigh               0
+Knee                0
+Ankle               0
+Biceps              0
+Forearm             0
+Wrist               0
+Unnamed: 14       251
+dtype: int64
+
